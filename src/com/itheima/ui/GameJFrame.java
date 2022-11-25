@@ -10,7 +10,6 @@ import java.util.Random;
 
 public class GameJFrame extends JFrame implements KeyListener, ActionListener {
 
-    //comments for test
     int[][] data = new int[4][4];
     int x = 0;
     int y = 0;
