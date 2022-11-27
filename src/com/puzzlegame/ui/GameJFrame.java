@@ -1,4 +1,4 @@
-package com.itheima.ui;
+package com.puzzlegame.ui;
 
 import javax.swing.*;
 import javax.swing.border.BevelBorder;
@@ -26,7 +26,6 @@ public class GameJFrame extends JFrame implements KeyListener, ActionListener {
     };
 
     JMenuItem rePlayItem = new JMenuItem("Replay");
-    JMenuItem reLoginItem = new JMenuItem("Re login");
     JMenuItem exitItem = new JMenuItem("Exit");
     JMenuItem accountItem = new JMenuItem("QR Code");
 
@@ -100,7 +99,6 @@ public class GameJFrame extends JFrame implements KeyListener, ActionListener {
         JMenu aboutUs = new JMenu("About Us");
 
         functionJMenu.add(rePlayItem);
-        functionJMenu.add(reLoginItem);
         functionJMenu.add(exitItem);
 
         aboutUs.add(accountItem);
@@ -111,7 +109,6 @@ public class GameJFrame extends JFrame implements KeyListener, ActionListener {
         this.setJMenuBar(jMenuBar);
 
         rePlayItem.addActionListener(this);
-        reLoginItem.addActionListener(this);
         exitItem.addActionListener(this);
         accountItem.addActionListener(this);
 
@@ -231,10 +228,6 @@ public class GameJFrame extends JFrame implements KeyListener, ActionListener {
             count = 0;
             initData();
             initImage();
-        } else if (obj == reLoginItem) {
-            System.out.println("re login");
-            this.setVisible(false);
-            new LoginJFrame();
         } else if (obj == exitItem) {
             System.out.println("exit");
             System.exit(0);
